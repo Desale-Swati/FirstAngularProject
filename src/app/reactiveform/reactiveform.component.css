@@ -1,0 +1,14 @@
+mat-card{
+   background-image: url("https://c8.alamy.com/comp/HARY95/blank-page-of-old-green-vintage-paper-on-wooden-background-HARY95.jpg");
+   height: 460px;
+   width: 310px;
+   margin-left: 35%;
+   position: absolute;
+   color: white;
+}
+h1{
+    margin-left: 35%;
+}
+div.a{
+    margin-left: 35%;
+}

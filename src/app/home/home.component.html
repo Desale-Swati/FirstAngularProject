@@ -1,0 +1,55 @@
+
+
+
+<!-- <h2>Modal Login Form</h2>
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+     
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> 
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" >Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form> -->
+  <div class="a">
+  <!-- create button and hide and show btn create kr fakt  -->
+
+  <button  type="button" (click)="sssss()">
+    {{btnName}}
+  </button>
+  <div *ngIf = "show">
+    <p>Swati</p>
+    <p>Desale bai </p>
+  </div>
+
+  <div *ngIf = "!(show)">
+    <p>Bhushan </p>
+    <p>Desale</p>
+  </div>
+
+
+  <img   [src]="itemImageUrl" style="padding: 65px;">
+  <img  height="190px" width="300px" [src]="newimg">  
+
+  <!-- Angular pipe example -->
+<p>{{name | uppercase }}</p>
+<p>{{today | date: 'fullDate' }}</p>
+<p>{{val |currency:'INR' }}</p>
+</div>
+<br>
+<app-footer></app-footer>

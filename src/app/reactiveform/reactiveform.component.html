@@ -1,0 +1,97 @@
+
+<div class="a">
+  <!-- one way data binding  --> 
+ 
+    <h1>{{fname}}</h1>  <!--//interpolution -->
+    <h1>{{lastname()}}</h1>
+    <h1>{{arr}}</h1>
+    <P>{{database.name}}</P>
+    <P>{{database.sirname}}</P>
+    <P>{{username()}}</P>
+    <button (click)="notify()">click me</button><br>
+    <!-- <input type="text"/> --> 
+      
+     <p> enter your name</p><input [(ngModel)]="fullname"/>
+     <p> your name is {{fullname}}</p> 
+     
+ 
+      <input type="text"  (input)="setName($event)"   /> <br> 
+      <p>{{name}}</p>
+  
+      <h1>stylebinding</h1>
+ 
+ </div>
+<h1>reactiveform Login Form </h1>
+
+  <mat-card>
+   
+<form [formGroup]="form"  (ngSubmit)="submit()">
+   <mat-card-title> Login </mat-card-title>
+    <label>User Name </label>
+    <input type="text"  formControlName='username'/><br>
+    <small class="form-text text-muted" 
+    *ngIf="form.controls.username.touched && form.controls.username.errors?.required">
+      Please enter username.!
+  </small>
+     <!-- <div *ngIf="form.controls.username.errors?.required ">username is required </div>   -->
+    <!-- <mat-error *ngIf="form.get('username').hasError('minLength')">
+     username must be at least 4 characters </mat-error>   -->
+
+    <label> Password </label>
+    <input type="password" formControlName='password'/><br>
+    <mat-error  *ngIf="form.controls.password.touched && form.controls.password.errors?.required"> password is required</mat-error>
+   <small class="form-text text-muted" 
+    *ngIf="form.controls.password.touched && form.controls.password.errors?.required">
+      Please enter Password.!
+  </small>
+    <label> Start Date </label>
+    <input type="date" formControlName='startdate'><br>
+    <small class="form-text text-muted" 
+    *ngIf="form.controls.startdate.touched && form.controls.startdate.errors?.required">
+      Please enter start Date.!
+  </small>
+    <label> End Date </label>
+    <input type="date"  format="dd/mm/yyyy" formControlName='enddate'><br> 
+    <small class="form-text text-muted" 
+    *ngIf="form.controls.enddate.touched && form.controls.enddate.errors?.required">
+      Please enter End Date.!
+  </small>
+  <p>choose favourite language</p>
+  <input type ="radio" name=fav_lang value=html>
+  <label>html</label><br>
+  <input type ="radio" name=fav_lang value= css>
+  <label>css</label><br>
+  <input type ="radio" name=fav_lang value=php>
+  <label>php</label><br>
+
+  
+   <!-- <small class="form-text text-muted" 
+    *ngIf="form.get('enddate').errors?.MatchDate">
+      Please validDate End Date.!
+  </small> -->
+ 
+
+      <mat-form-field appearance="fill"> 
+      <mat-label>Enter a date range</mat-label>
+      <mat-date-range-input [formGroup]="form" formControlName='end' [rangePicker]="picker">
+       
+        <input matStartDate formControlName="start" placeholder="Start date"><br>
+        <input matEndDate formControlName="end" placeholder="End date"><br>
+      </mat-date-range-input>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-date-range-picker #picker></mat-date-range-picker>
+
+    </mat-form-field>
+    <small class="form-text text-muted" 
+    *ngIf="form.controls.end.touched && form.controls.end.errors?.required">
+      Please enter Range Date.!
+    </small>
+    <br>
+    <!-- <p>Selected range: {{range.value | json}}</p> -->
+    
+    <button type="submit">submit</button>
+  </form>
+
+</mat-card>
+
+

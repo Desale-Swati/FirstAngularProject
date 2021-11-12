@@ -1,0 +1,18 @@
+<p>styel-binding works!</p>
+
+<div [style.color]="appstyle? 'blue':'orange'"> Style Binding </div> 
+
+<button [style.backgroundcolor]="active? 'blue':'orange'">Click me </button>  <br>
+<p>attribute binding</p>
+
+<button [attr.aria-lable]="att_bind" >{{att_bind}}morning</button>
+
+<div [class.special]="isSpecial" [class]="classExpression">Some text.</div>
+ 
+<iframe [attr.Height]="height"  [attr.width]="width" src="https://www.youtube.com/watch?v=JbDktrsnH40">
+</iframe> 
+
+<P>property bindig</P>
+<input type='text'  [disabled]='disable' [value]='value1'><br><br>
+<input type='text'   disabled={{disable}} value={{value1}}>
+<button (click)="disablebox()">Enable Texbox</button>

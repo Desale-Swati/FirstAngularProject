@@ -1,0 +1,22 @@
+p{   
+    display: block;
+    padding: 15px;
+    background-color:#1EC403;
+    padding:15px;
+    color:black;
+    width: 100%;
+    
+    margin-right:  0 px;
+    bottom: 0%;
+    position:fixed;
+    text-align: center;
+}
+    
+footer{
+    margin:2px  0 auto;
+
+}
+p:hover{
+    background-color: yellow;
+    display:block;
+    }

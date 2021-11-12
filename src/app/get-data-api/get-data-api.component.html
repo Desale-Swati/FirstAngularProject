@@ -1,0 +1,17 @@
+<div class="container-fluid">
+<table style="width:100% ">
+    <tr>
+        <th>User Id  </th>
+        <th>ID</th>
+        <th> Title </th>
+        <th>Completed </th>
+    </tr>
+    <!-- for loop use kela mulitple data aahe mahun ho  //  te pn vriable ch ka  -->
+    <tr *ngFor = "let g of getapiData">   
+        <td>{{g.userId}}</td>
+        <td> {{g.id}}</td>
+        <td>{{g.title}} </td>
+        <td> {{g.completed}}</td>
+    </tr>
+</table>
+</div>

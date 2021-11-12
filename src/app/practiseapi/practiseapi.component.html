@@ -1,0 +1,16 @@
+<p>practiseapi works!</p>
+<table>
+    <tr>
+        <th>userid </th>
+        <th>id</th>
+        <th>title</th>
+        <th>Completed</th>
+    </tr>
+    <tr *ngFor="let d of apidata"> 
+        
+        <td>{{d.userId}}</td>
+        <td>{{d.id}}</td>
+        <td>{{d.title}}</td>
+        <td>{{d.completed}}</td>
+    </tr>
+</table>

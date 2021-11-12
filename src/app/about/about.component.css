@@ -1,0 +1,6 @@
+.de {
+    width: 50% ;
+    box-align: "center";
+    position: absolute;
+    margin-left: 35%;
+}

@@ -1,0 +1,14 @@
+<div><p>template-driven works!</p>
+ <form  (ngSubmit)="Data(loginform)"  #loginform="ngForm">  <!-- # ha template variable aahe  -->
+<label>username</label>
+<input type="text" name="username" ngModel required  #username="ngModel"> <br><!--  "ngModel" would bind our input fields to properties on our data model. -->
+<span *ngIf="!username.valid && username.touched "> User name is required </span> <br>
+
+<label>password</label>
+<input type="password" name="password"  ngModel><br>
+<button type="submit">submit</button>
+<button type="button" (click)="clear()">delete</button> 
+</form>
+
+</div>
+ 
