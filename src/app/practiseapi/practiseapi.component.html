@@ -4,13 +4,14 @@
         <th>userid </th>
         <th>id</th>
         <th>title</th>
-        <th>Completed</th>
-    </tr>
-    <tr *ngFor="let d of apidata"> 
         
-        <td>{{d.userId}}</td>
+    </tr>
+    <tr *ngFor="let d of apidata.swati"> 
+        
+        <td>{{d.name}}</td>
         <td>{{d.id}}</td>
-        <td>{{d.title}}</td>
-        <td>{{d.completed}}</td>
+        <td>{{d.surName}}</td>
+        
     </tr>
 </table>
+
